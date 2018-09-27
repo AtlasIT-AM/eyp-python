@@ -44,6 +44,7 @@ class python::params {
     }
     'Suse':
     {
+      $include_epel=false
       case $::operatingsystem
       {
         'SLES':
@@ -54,6 +55,12 @@ class python::params {
             {
               $repo_url='http://download.opensuse.org/repositories/devel:/languages:/python/SLE_11_SP4/devel:languages:python.repo'
               $repo_name='Python Modules (SLE_11_SP4)'
+              $python_pkgs= [ 'python', 'python-pip' ]
+            }
+            '12.3':
+            {
+              $repo_url=undef
+              $repo_name=undef
               $python_pkgs= [ 'python', 'python-pip' ]
             }
             default: { fail("Unsupported operating system ${::operatingsystem} ${::operatingsystemrelease}") }
