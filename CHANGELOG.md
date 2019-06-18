@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 0.1.11
+
+* added **index_url** and **trusted_host** options to resouce **pythonpip**
+* EPEL is not needed on RHEL8
+
+## 0.1.10
+
+* added RHEL8 support
+* updated dependencies: added **eyp-alternatives**
+
 ## 0.1.9
 
 * added SLES12SP4 support
